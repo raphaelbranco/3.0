@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GkJBFAy9Np9hAM0/PxzwdxNv95j9jPWONo+JWlLiQhDxTSWep0HbiSesc+0lEMC0Xob7SbX7hRScaNrFbMeTFQ==",
+  "success": true,
+  "projectFilePath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base_30\\Base30.Admin.Domain\\Base30.SysAdmin.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rbranco\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\rbranco\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

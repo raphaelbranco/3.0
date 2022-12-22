@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Base30.SysAdmin.Domain": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
