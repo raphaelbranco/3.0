@@ -1,9 +1,6 @@
 using Base30.SysAdmin.Application.Setup;
 using Base30.SysAdmin.Data;
-using Base30.SysAdmin.Domain;
 using MediatR;
-using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,10 +1,4 @@
-﻿using Base30.Core.Data;
-using Base30.Core.DomainObjects;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Xml.Linq;
+﻿using Base30.Core.DomainObjects;
 
 namespace Base30.SysAdmin.Domain
 {

@@ -25,7 +25,7 @@ namespace Base30.SysAdmin.Application.Controllers
         [HttpPost("/Create")]
         public async Task<IActionResult> Create(bool active, string name, string description)
         {
-            SearchCreateCommand command = new SearchCreateCommand(bool active, string name, string description);
+            SearchCreateCommand command = new SearchCreateCommand(active, name, description);
             await _mediatoRHandler.SendCommand(command);
 
 
@@ -36,22 +36,9 @@ namespace Base30.SysAdmin.Application.Controllers
         }
 
         [HttpPost("/Update")]
-        public async Task<IActionResult> Update(bool active, string name, string description)
+        public async Task<IActionResult> Update(Guid id, bool active, string name, string description)
         {
-            SearchUpdateCommand command = new SearchUpdateCommand(bool active, string name, string description);
-            await _mediatoRHandler.SendCommand(command);
-
-
-            if (_coreController.OperationIsValid()) return Ok();
-
-            var notification = _coreController.GetErrorMessage();
-            return Ok(notification);
-        }
-
-        [HttpPost("/Inactive")]
-        public async Task<IActionResult> Inactivate(bool active, string name, string description)
-        {
-            SearchInactivateCommand command = new SearchInactivateCommand(bool active, string name, string description);
+            SearchUpdateCommand command = new SearchUpdateCommand(id, active, name, description);
             await _mediatoRHandler.SendCommand(command);
 
 
@@ -66,18 +53,18 @@ namespace Base30.SysAdmin.Application.Controllers
         {
             IEnumerable<SearchDto?> searchDto = _searchQueries.GetAll().Result;
 
-            Validation.ValidateIfNull(searchDto, "Nenhum Search cadastrado");)
+            Validation.ValidateIfNull(searchDto, "Nenhum Search cadastrado");
 
-	return Ok(searchDto);
+            return Ok(searchDto);
         }
         [HttpGet("/GetById")]
         public IActionResult GetById(Guid id)
         {
             IEnumerable<SearchDto?> searchDto = _searchQueries.GetById(id).Result;
 
-            Validation.ValidateIfNull(searchDto, "Registro não encontrado");)
+            Validation.ValidateIfNull(searchDto, "Registro não encontrado");
 
-	return Ok(searchDto);
+            return Ok(searchDto);
         }
     }
 }

@@ -35,7 +35,10 @@ namespace Base30.SysAdmin.Application.Commands.Menu.Commands
             {
                 RuleFor(c => c.Name)
                     .NotEqual(string.Empty)
+                    .NotEmpty()                    
+                    .MaximumLength(100)
                     .WithMessage("Menu deve possuir um nome");
+
             }
         }
     }

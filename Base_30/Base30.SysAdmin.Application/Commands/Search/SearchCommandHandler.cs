@@ -1,7 +1,6 @@
 ﻿using Base30.Core.Communication.Mediator;
 using Base30.Core.Messages;
 using Base30.Core.Messages.CommonMessages.Notifications;
-using Base30.SysAdmin.Application.Commands.Search;
 using Base30.SysAdmin.Application.Commands.Search.Commands;
 using MediatR;
 
@@ -11,9 +10,7 @@ namespace Base30.SysAdmin.Application.Commands.Search
           IRequestHandler<SearchCreateCommand, bool>,
             IRequestHandler<SearchSyncNoSqlCreateCommand, bool>,
             IRequestHandler<SearchUpdateCommand, bool>,
-            IRequestHandler<SearchSyncUpdateNoSqlCommand, bool>,
-            IRequestHandler<SearchInactivateCommand, bool>,
-            IRequestHandler<SearchSyncInactivateNoSqlCommand, bool>
+            IRequestHandler<SearchSyncNoSqlUpdateCommand, bool>
 
     {
         private readonly IMediatoRHandler _mediatoRHandler;
@@ -48,18 +45,6 @@ namespace Base30.SysAdmin.Application.Commands.Search
             if (!ValidateCommand(message)) return false;
 
             return await _searchExecuteCommand.SyncNoSqlUpdate(message, cancellationToken);
-        }
-        public async Task<bool> Handle(SearchInactivateCommand message, CancellationToken cancellationToken)
-        {
-            if (!ValidateCommand(message)) return false;
-
-            return await _searchExecuteCommand.Inactivate(message, cancellationToken);
-        }
-        public async Task<bool> Handle(SearchSyncNoSqlInactivateCommand message, CancellationToken cancellationToken)
-        {
-            if (!ValidateCommand(message)) return false;
-
-            return await _searchExecuteCommand.SyncNoSqlInactivate(message, cancellationToken);
         }
         private bool ValidateCommand(Command message)
         {
