@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mZaFa83thvApRKzpjIjD+e7t+POVC+uDvMBiLhdPfsk=",
+  "Source": "Base30.SysAdmin.Application",
+  "BasePath": "_content/Base30.SysAdmin.Application",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

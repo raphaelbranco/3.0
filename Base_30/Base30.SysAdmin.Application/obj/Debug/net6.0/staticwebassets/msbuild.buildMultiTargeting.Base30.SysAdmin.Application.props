@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Base30.SysAdmin.Application.props" />
+</Project>

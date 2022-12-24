@@ -1346,7 +1346,8 @@
         "dependencies": {
           "FluentValidation": "11.4.0",
           "MediatR": "11.1.0",
-          "MongoDB.Bson": "2.18.0"
+          "MongoDB.Bson": "2.18.0",
+          "MongoDB.Driver": "2.18.0"
         },
         "compile": {
           "bin/placeholder/Base30.Core.dll": {}
@@ -1377,7 +1378,8 @@
         "dependencies": {
           "Base30.Core": "1.0.0",
           "MediatR": "11.1.0",
-          "MongoDB.Bson": "2.18.0"
+          "MongoDB.Bson": "2.18.0",
+          "MongoDB.Driver": "2.18.0"
         },
         "compile": {
           "bin/placeholder/Base30.SysAdmin.Domain.dll": {}

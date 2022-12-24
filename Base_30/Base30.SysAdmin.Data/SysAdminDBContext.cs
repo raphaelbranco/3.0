@@ -16,6 +16,7 @@ namespace Base30.SysAdmin.Data
         }
 
         public DbSet<Menu> Menu { get; set; }
+        public DbSet<Search> Search { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.Ignore<Event>();

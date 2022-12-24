@@ -11,13 +11,14 @@ namespace Base30.SysAdmin.Data.Repository
         private readonly SysAdminDBContext _context;
         private readonly SysAdminNoSQLContext _contextNoSql;
 
-        public MenuRepository(SysAdminDBContext context, IOptions<NoSqlSettings> settingsNoSql)
+        public MenuRepository(SysAdminDBContext context, SysAdminNoSQLContext contextNoSql)
         {
             _context = context;
-            _contextNoSql = new SysAdminNoSQLContext(settingsNoSql);
+            _contextNoSql = contextNoSql;
         }
 
         public IUnitOfWork UnitOfWork => _context;
+        public IUnitOfWorkNoSql UnitOfWorkNoSql => _contextNoSql;
 
         public void Create(Menu menu)
         {

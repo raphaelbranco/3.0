@@ -12,7 +12,7 @@ namespace Base30.SysAdmin.Domain
         public string? Name { get; private set; }
         public string? Description { get; private set; }
 
-        public Search(DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool active, string name, string description)
+        public Search(DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool? active, string? name, string? description)
         {
             InsDt = insdt;
             UpdDt = upddt;
@@ -24,7 +24,7 @@ namespace Base30.SysAdmin.Domain
 
             Validate();
         }
-        public void Update(bool active, string name, string description)
+        public void Update(bool? active, string? name, string? description)
         {
             Active = active;
             Name = name;
@@ -49,7 +49,7 @@ namespace Base30.SysAdmin.Domain
         public string? Name { get; private set; }
         public string? Description { get; private set; }
 
-        public SearchNoSql(DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool active, string name, string description)
+        public SearchNoSql(DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool? active, string? name, string? description)
         {
             InsDt = insdt;
             UpdDt = upddt;
@@ -59,6 +59,14 @@ namespace Base30.SysAdmin.Domain
             Name = name;
             Description = description;
 
+
+        }
+        public void UpdateNoSql(Guid userupd, bool? active, string? name, string? description)
+        {
+            UserUpd = userupd;
+            Active = active;
+            Name = name;
+            Description = description;
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Base30.Core.Data;
+using MongoDB.Driver;
 
 namespace Base30.SysAdmin.Domain
 {
@@ -9,7 +10,7 @@ namespace Base30.SysAdmin.Domain
         void Create(Search search);
         void SyncCreate(SearchNoSql searchNoSql);
         void Update(Search search);
-        void SyncUpdate(SearchNoSql searchNoSql);
+        ReplaceOneResult? SyncUpdate(Guid id, Search item);
     }
 }
 

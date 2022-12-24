@@ -16,10 +16,14 @@ namespace Base30.SysAdmin.Application.Commands.Search
         {
 
             Domain.Search search =
-        new(
-        message.Active,
-        message.Name,
-        message.Description
+                                            new(
+                                                message.InsDt,
+                                                message.UpdDt,
+                                                message.UserUpd,
+                                                message.SysCustomer,
+                                                message.Active,
+                                                message.Name,
+                                                message.Description
         );
             _searchRepository.Create(search);
 
@@ -28,6 +32,6 @@ namespace Base30.SysAdmin.Application.Commands.Search
 
             return await CommitCommand(search);
         }
-
     }
 }
+
