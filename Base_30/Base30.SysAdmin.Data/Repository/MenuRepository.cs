@@ -18,6 +18,7 @@ namespace Base30.SysAdmin.Data.Repository
         }
 
         public IUnitOfWork UnitOfWork => _context;
+
         public IUnitOfWorkNoSql UnitOfWorkNoSql => _contextNoSql;
 
         public void Create(Menu menu)
@@ -43,15 +44,13 @@ namespace Base30.SysAdmin.Data.Repository
         public async Task<IEnumerable<MenuNoSql>?> GetAll()
         {
             IEnumerable<MenuNoSql> menuNoSql = await _contextNoSql.MenuNoSql.Find(x => true).ToListAsync();
-
-            return menuNoSql;
+            
+            return menuNoSql;            
         }
 
         public void Dispose()
         {
             _context?.Dispose();
         }
-
-       
     }
 }

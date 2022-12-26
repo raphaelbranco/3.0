@@ -20,9 +20,7 @@ namespace Base30.SysAdmin.Application.Setup
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            //services.AddScoped<DomainNotificationHandler, DomainNotificationHandler>();
-            //aki
-            //services.AddScoped<MenuRepositoryNoSQL, MenuRepositoryNoSQL>();
+            services.AddScoped<DomainNotificationHandler, DomainNotificationHandler>();
             
             //CoreBase
             services.AddScoped<ICoreController, CoreController>();
@@ -32,7 +30,6 @@ namespace Base30.SysAdmin.Application.Setup
 
             //Mediator
             services.AddScoped<IMediatoRHandler, MediatRHandler>();
-
 
 
             //**** Repository ****

@@ -19,6 +19,7 @@ namespace Base30.SysAdmin.Data.Repository
         }
 
         public IUnitOfWork UnitOfWork => _context;
+        
         public IUnitOfWorkNoSql UnitOfWorkNoSql => _contextNoSql;
 
         public void Create(Search search)
@@ -57,7 +58,7 @@ namespace Base30.SysAdmin.Data.Repository
         public (SearchNoSql?, Expression<Func<SearchNoSql, bool>>) LoadByIdNoSqlToSyncUpdate(Guid searchId)
         {
             IMongoCollection<SearchNoSql> search = _contextNoSql.SearchNoSql;
-            Expression<Func<SearchNoSql, bool>> filter = x => x.Id.Equals(searchId);
+            Expression<Func<SearchNoSql, bool>> filter = x => x.SearchId.Equals(searchId);
             SearchNoSql? searchItem = search.Find(filter).FirstOrDefault();
 
             return (searchItem, filter);

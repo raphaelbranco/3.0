@@ -133,7 +133,6 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.AssemblyInfoInputs.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.AssemblyInfo.cs
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.csproj.CoreCompileInputs.cache
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cs
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\appsettings.Development.json
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\appsettings.json

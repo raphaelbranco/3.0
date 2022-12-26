@@ -36,15 +36,6 @@ namespace Base30.SysAdmin.Application.Controllers
             return Ok(menuDto);
         }
 
-        //[HttpGet("LoadById")]
-        //public IActionResult LoadById(Guid id)
-        //{
-        //    IEnumerable<MenuDto?> menuDto = _menuQueries.LoadById(id).Result;
-
-        //    Validation.ValidateIfNull(menuDto, "Nenhum menu cadastrado");
-
-        //    return Ok(menuDto);
-        //}
 
 
         [HttpPost]

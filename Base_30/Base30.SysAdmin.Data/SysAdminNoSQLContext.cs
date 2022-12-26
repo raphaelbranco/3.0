@@ -7,7 +7,7 @@ using Base30.Core.Data;
 
 namespace Base30.SysAdmin.Data
 {
-    public class SysAdminNoSQLContext : DbContext, IUnitOfWorkNoSql, IDisposable
+    public class SysAdminNoSQLContext : IDisposable, IUnitOfWorkNoSql
     {
         private IMongoDatabase? _database;
         private IMongoClient? _clientNoSql;
@@ -43,7 +43,7 @@ namespace Base30.SysAdmin.Data
             return sucess;
         }
 
-        public override void Dispose()
+        public void Dispose()
         {
             _clientNoSql = null;
             _database = null;

@@ -12,12 +12,12 @@ namespace Base30.SysAdmin.Domain
         public string? Name { get; private set; }
         public string? Description { get; private set; }
 
-        public Search(DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool? active, string? name, string? description)
+        public Search(DateTime insDt, DateTime updDt, Guid userUpd, Guid sysCustomer, bool? active, string? name, string? description)
         {
-            InsDt = insdt;
-            UpdDt = upddt;
-            UserUpd = userupd;
-            SysCustomer = syscustomer;
+            InsDt = insDt;
+            UpdDt = updDt;
+            UserUpd = userUpd;
+            SysCustomer = sysCustomer;
             Active = active;
             Name = name;
             Description = description;
@@ -51,13 +51,14 @@ namespace Base30.SysAdmin.Domain
         public string? Name { get; private set; }
         public string? Description { get; private set; }
 
-        public SearchNoSql(Guid searchid, DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool? active, string? name, string? description)
+        public SearchNoSql(Guid searchid, DateTime insDt, DateTime updDt, Guid userUpd, Guid sysCustomer, bool? active, string? name, string? description)
         {
             SearchId = searchid;
-            InsDt = insdt;
-            UpdDt = upddt;
-            UserUpd = userupd;
-            SysCustomer = syscustomer;
+
+            InsDt = insDt;
+            UpdDt = updDt;
+            UserUpd = userUpd;
+            SysCustomer = sysCustomer;
             Active = active;
             Name = name;
             Description = description;
