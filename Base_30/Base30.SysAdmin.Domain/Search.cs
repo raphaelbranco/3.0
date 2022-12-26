@@ -24,8 +24,9 @@ namespace Base30.SysAdmin.Domain
 
             Validate();
         }
-        public void Update(bool? active, string? name, string? description)
+        public void Update(Guid userupd, bool? active, string? name, string? description)
         {
+            UserUpd = userupd;
             Active = active;
             Name = name;
             Description = description;
@@ -41,6 +42,7 @@ namespace Base30.SysAdmin.Domain
     public class SearchNoSql : Entity, IAggregateRoot
     {
 
+        public Guid SearchId { get; private set; }
         public DateTime InsDt { get; private set; }
         public DateTime UpdDt { get; private set; }
         public Guid UserUpd { get; private set; }
@@ -49,8 +51,9 @@ namespace Base30.SysAdmin.Domain
         public string? Name { get; private set; }
         public string? Description { get; private set; }
 
-        public SearchNoSql(DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool? active, string? name, string? description)
+        public SearchNoSql(Guid searchid, DateTime insdt, DateTime upddt, Guid userupd, Guid syscustomer, bool? active, string? name, string? description)
         {
+            SearchId = searchid;
             InsDt = insdt;
             UpdDt = upddt;
             UserUpd = userupd;

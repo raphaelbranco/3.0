@@ -47,7 +47,7 @@ namespace Base30.SysAdmin.Application.Controllers
         //}
 
 
-        [HttpPost("/Create")]
+        [HttpPost]
         public async Task<IActionResult> Create(string nome, int order)
         {
             MenuCreateCommand command = new MenuCreateCommand(new Guid(), new Guid(), nome, nome, null, order);
@@ -66,7 +66,7 @@ namespace Base30.SysAdmin.Application.Controllers
             }
         }
 
-        [HttpPost("/Update")]
+        [HttpPut]
         public async Task<IActionResult> Update(Guid id, string nome, int order)
         {
             MenuUpdateCommand command = new MenuUpdateCommand(id, new Guid(), nome, nome, null, order);

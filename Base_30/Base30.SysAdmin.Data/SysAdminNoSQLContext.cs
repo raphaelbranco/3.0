@@ -12,7 +12,7 @@ namespace Base30.SysAdmin.Data
         private IMongoDatabase? _database;
         private IMongoClient? _clientNoSql;
 
-        public SysAdminNoSQLContext(IOptions<NoSqlSettings> settings, DbContextOptions<SysAdminNoSQLContext> options) : base(options)
+        public SysAdminNoSQLContext(IOptions<NoSqlSettings> settings)
         {
             _clientNoSql = new MongoClient(settings.Value.ConnectionString);
             if (_clientNoSql != null)

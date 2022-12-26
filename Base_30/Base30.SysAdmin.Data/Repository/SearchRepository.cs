@@ -1,8 +1,9 @@
 ﻿using Base30.SysAdmin.Domain;
 using Base30.Core.Data;
 using Microsoft.EntityFrameworkCore;
-using MongoDB.Driver;
 using System.Linq.Expressions;
+using MongoDB.Driver;
+using Microsoft.Extensions.Options;
 
 namespace Base30.SysAdmin.Data.Repository
 {
@@ -11,10 +12,10 @@ namespace Base30.SysAdmin.Data.Repository
         private readonly SysAdminDBContext _context;
         private readonly SysAdminNoSQLContext _contextNoSql;
 
-        public SearchRepository(SysAdminDBContext context, SysAdminNoSQLContext contextNoSql)
+        public SearchRepository(SysAdminDBContext context, IOptions<NoSqlSettings> settingsNoSql)
         {
             _context = context;
-            _contextNoSql = contextNoSql;
+            _contextNoSql = new SysAdminNoSQLContext(settingsNoSql);
         }
 
         public IUnitOfWork UnitOfWork => _context;
@@ -35,24 +36,11 @@ namespace Base30.SysAdmin.Data.Repository
             _context.Search.Update(search);
         }
 
-        public ReplaceOneResult? SyncUpdate(Guid id, Search item)
+        public ReplaceOneResult? SyncUpdate(SearchNoSql searchNoSql, Expression<Func<SearchNoSql, bool>> filter)
         {
-            IMongoCollection<SearchNoSql> search = _contextNoSql.SearchNoSql;
-
-            Expression<Func<SearchNoSql, bool>> filter = x => x.Id.Equals(id);
-
-            SearchNoSql searchItem = search.Find(filter).FirstOrDefault();
-
-            if (searchItem == null) return null;
-            searchItem.UpdateNoSql(item.UserUpd, item.Active, item.Name, item.Description);
-            return search.ReplaceOne(filter, searchItem);
+            IMongoCollection<SearchNoSql> searchC = _contextNoSql.SearchNoSql;
+            return searchC.ReplaceOne(filter, searchNoSql);
         }
-        public Search? LoadById(Guid id)
-        {
-            Search? search = _context.Search?.AsNoTracking().Where(m => m.Id == id).SingleOrDefault();
-            return search;
-        }
-
         public async Task<IEnumerable<SearchNoSql>?> GetAll()
         {
             IEnumerable<SearchNoSql> searchNoSql = await _contextNoSql.SearchNoSql.Find(x => true).ToListAsync();
@@ -60,6 +48,28 @@ namespace Base30.SysAdmin.Data.Repository
             return searchNoSql;
         }
 
+        public Search? LoadById(Guid id)
+        {
+            Search? search = _context.Search?.AsNoTracking().Where(m => m.Id == id).SingleOrDefault();
+            return search;
+        }
+
+        public (SearchNoSql?, Expression<Func<SearchNoSql, bool>>) LoadByIdNoSqlToSyncUpdate(Guid searchId)
+        {
+            IMongoCollection<SearchNoSql> search = _contextNoSql.SearchNoSql;
+            Expression<Func<SearchNoSql, bool>> filter = x => x.Id.Equals(searchId);
+            SearchNoSql? searchItem = search.Find(filter).FirstOrDefault();
+
+            return (searchItem, filter);
+        }
+
+        public SearchNoSql? LoadByIdNoSql(Guid id)
+        {
+            Task<SearchNoSql>? searchNosqlTask = _contextNoSql.SearchNoSql?.Find(item => item.SearchId == id).FirstOrDefaultAsync();
+            SearchNoSql? searchNosql = searchNosqlTask?.Result;
+
+            return searchNosql;
+        }
         public void Dispose()
         {
             _context?.Dispose();

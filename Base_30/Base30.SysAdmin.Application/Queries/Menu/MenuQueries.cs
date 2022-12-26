@@ -27,6 +27,4 @@ namespace Base30.SysAdmin.Application.Queries.Menu
             _menuRepository?.Dispose();
         }
     }
-
-
 }

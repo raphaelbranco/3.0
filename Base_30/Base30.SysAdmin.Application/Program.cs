@@ -28,6 +28,7 @@ builder.Services.Configure<NoSqlSettings>(options =>
     options.Database = builder.Configuration.GetSection("SysAdminNoSqlDatabase:DatabaseName").Value;
 });
 
+
 //*** Mongo DB
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

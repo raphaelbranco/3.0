@@ -6,8 +6,8 @@ using MediatR;
 
 namespace Base30.SysAdmin.Application.Commands.Search
 {
-    public class SysAdminCommandHandler :
-          IRequestHandler<SearchCreateCommand, bool>,
+    public class SearchCommandHandler :
+            IRequestHandler<SearchCreateCommand, bool>,
             IRequestHandler<SearchSyncNoSqlCreateCommand, bool>,
             IRequestHandler<SearchUpdateCommand, bool>,
             IRequestHandler<SearchSyncNoSqlUpdateCommand, bool>
@@ -16,7 +16,7 @@ namespace Base30.SysAdmin.Application.Commands.Search
         private readonly IMediatoRHandler _mediatoRHandler;
         private readonly ISearchExecuteCommand _searchExecuteCommand;
 
-        public SysAdminCommandHandler(IMediatoRHandler mediatoRHandler, ISearchExecuteCommand searchExecuteCommand)
+        public SearchCommandHandler(IMediatoRHandler mediatoRHandler, ISearchExecuteCommand searchExecuteCommand)
         {
             _mediatoRHandler = mediatoRHandler;
             _searchExecuteCommand = searchExecuteCommand;

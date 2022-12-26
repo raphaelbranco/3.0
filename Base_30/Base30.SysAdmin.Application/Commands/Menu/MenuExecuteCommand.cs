@@ -54,12 +54,9 @@ namespace Base30.SysAdmin.Application.Commands.Menu
 
         public Task<bool> SyncCreate(MenuSyncNoSqlCreateCommand message, CancellationToken cancellationToken)
         {
-            //Add Menu on DB
             Domain.MenuNoSql menu = new(message.Id, message.SysCustomer, true, message.Name, message.Description, message.Order, message.SourceMenu);
             _menuRepository.SyncCreate(menu);
 
-            //MenuCreatedEvent newMenuEvent = new(menu.Id, menu.Name ?? "", "creation");
-            //menu.AddEvent(newMenuEvent);
             return Task.FromResult(true);
         }
 

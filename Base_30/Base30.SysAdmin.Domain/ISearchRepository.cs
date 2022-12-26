@@ -1,5 +1,6 @@
 ﻿using Base30.Core.Data;
 using MongoDB.Driver;
+using System.Linq.Expressions;
 
 namespace Base30.SysAdmin.Domain
 {
@@ -10,7 +11,9 @@ namespace Base30.SysAdmin.Domain
         void Create(Search search);
         void SyncCreate(SearchNoSql searchNoSql);
         void Update(Search search);
-        ReplaceOneResult? SyncUpdate(Guid id, Search item);
+        ReplaceOneResult? SyncUpdate(SearchNoSql searchNoSql, Expression<Func<SearchNoSql, bool>> filter);
+        (SearchNoSql?, Expression<Func<SearchNoSql, bool>>) LoadByIdNoSqlToSyncUpdate(Guid searchId);
+        SearchNoSql? LoadByIdNoSql(Guid id);
     }
 }
 
