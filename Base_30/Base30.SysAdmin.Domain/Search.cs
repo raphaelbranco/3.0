@@ -1,7 +1,7 @@
 ﻿using Base30.Core.DomainObjects;
 
 namespace Base30.SysAdmin.Domain
-{//
+{
     public class Search : Entity, IAggregateRoot
     {
         public DateTime InsDt { get; private set; }
