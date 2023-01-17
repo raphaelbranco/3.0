@@ -1,9 +1,14 @@
-﻿using AutoMapper;
+﻿using Authentication.Application.Commands.Users.Command;
+using AutoMapper;
+using Azure.Core;
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using Base30.Authentication.Application.Events.AspNetUsers;
 using Base30.Authentication.Application.Queries.AspNetUsers;
+using Base30.Authentication.Data.Repository;
 using Base30.Authentication.Domain;
 using Base30.Core.Communication.Mediator;
+using Base30.Core.Messages.CommonMessages.Notifications;
+using FluentResults;
 using Microsoft.AspNetCore.Identity;
 using System.Linq.Expressions;
 
@@ -74,11 +79,45 @@ namespace Base30.Authentication.Application.Commands.AspNetUsers
             bool sucess = await _aspnetusersRepository.UnitOfWork.Commit() == false;
             if (!sucess)
             {
-                AspNetUsersFailedEvent newAspNetUsersFailedEvent = new("Erro ao criar ou atualizar AspNetUsers no BD");
+                AspNetUsersFailedEvent newAspNetUsersFailedEvent = new("Error creating AspNetUsers on DB");
                 aspnetusers.AddEvent(newAspNetUsersFailedEvent);
             }
 
             return sucess;
+        }
+
+        public async Task<bool> Login(LoginCommand message, CancellationToken cancellationToken)
+        {
+            IdentityUser<Guid>? user = _aspnetusersRepository.GetUserByEmail(message.Email!);
+
+            //Can't find user
+            if (user == null)
+            {
+                await _mediatoRHandler.PublishNotification(new DomainNotification("Login failed", "Login failed"));
+                return false;
+            }
+
+            SignInResult resLogin = await _aspnetusersRepository.Login(user!, message.PasswordHash!);
+
+            //Wrong password
+            if (!resLogin.Succeeded)
+            {
+                await _mediatoRHandler.PublishNotification(new DomainNotification("Login failed", "Login failed"));                
+                return false;
+            }
+
+            return true;
+        }
+
+        public async Task<bool> LogOut(LogOutCommand message, CancellationToken cancellationToken)
+        {
+            if (!_aspnetusersRepository.LogOut()) 
+            {
+                await _mediatoRHandler.PublishNotification(new DomainNotification("LogOut failed", "LogOut failed"));
+                return false;
+            }
+
+            return true;
         }
 
         public void Dispose()

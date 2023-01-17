@@ -4,6 +4,8 @@ using Base30.Core.DomainObjects;
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using Base30.Authentication.Application.Queries.AspNetUsers;
 using Microsoft.AspNetCore.Mvc;
+using Authentication.Application.Commands.Users.Command;
+
 namespace Base30.SysAdmin.Application.Controllers
 {
     [Route("[controller]")]
@@ -46,6 +48,31 @@ namespace Base30.SysAdmin.Application.Controllers
             Validation.ValidateIfNull(aspnetusersDto, "Registro não encontrado");
 
             return Ok(aspnetusersDto);
+        }
+
+        [HttpPost("/Login")]
+        public async Task<IActionResult> Login(string email = "teste@14.com", string password = "12345S#s1")
+        {
+            LoginCommand command = new LoginCommand(email, password);
+            await _mediatoRHandler.SendCommand(command);
+
+
+            if (_coreController.OperationIsValid()) return Ok();
+
+            var notification = _coreController.GetErrorMessage();
+            return Ok(notification);
+        }
+
+        [HttpPost("/LogOut")]
+        public async Task<IActionResult> LogOut(string email = "teste@14.com")
+        {
+            LogOutCommand command = new LogOutCommand(email);
+            await _mediatoRHandler.SendCommand(command);
+
+            if (_coreController.OperationIsValid()) return Ok();
+
+            var notification = _coreController.GetErrorMessage();
+            return Ok(notification);
         }
     }
 }

@@ -10,6 +10,7 @@ using Base30.Core.Base.Controller;
 using Authentication.Application.Events;
 using Base30.Core.Communication.Mediator;
 using Microsoft.AspNetCore.Identity;
+using Authentication.Application.Commands.Users.Command;
 
 namespace Authentication.Application.Setup
 {
@@ -42,7 +43,8 @@ namespace Authentication.Application.Setup
             services.AddScoped<IAspNetUsersExecuteCommand, AspNetUsersExecuteCommand>();
             services.AddScoped<IRequestHandler<AspNetUsersCreateCommand, bool>, AspNetUsersCommandHandler>();
             services.AddScoped<IRequestHandler<AspNetUsersSyncNoSqlCreateCommand, bool>, AspNetUsersCommandHandler>();
-
+            services.AddScoped<IRequestHandler<LoginCommand, bool>, AspNetUsersCommandHandler>();
+            services.AddScoped<IRequestHandler<LogOutCommand, bool>, AspNetUsersCommandHandler>();
 
             //****Events * *** /
             //AspNetUsers

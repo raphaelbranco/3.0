@@ -4,12 +4,15 @@ using Base30.Core.Messages.CommonMessages.Notifications;
 using Base30.Authentication.Application.Commands.AspNetUsers;
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using MediatR;
+using Authentication.Application.Commands.Users.Command;
 
 namespace Base30.Authentication.Application.Commands.AspNetUsers
 {
     public class AspNetUsersCommandHandler :
-          IRequestHandler<AspNetUsersCreateCommand, bool>,
-            IRequestHandler<AspNetUsersSyncNoSqlCreateCommand, bool>
+            IRequestHandler<AspNetUsersCreateCommand, bool>,
+            IRequestHandler<AspNetUsersSyncNoSqlCreateCommand, bool>,
+            IRequestHandler<LoginCommand, bool>,
+            IRequestHandler<LogOutCommand, bool>
 
     {
         private readonly IMediatoRHandler _mediatoRHandler;
@@ -33,7 +36,20 @@ namespace Base30.Authentication.Application.Commands.AspNetUsers
 
             return await _aspnetusersExecuteCommand.SyncNoSqlCreate(message, cancellationToken);
         }
-        
+
+        public async Task<bool> Handle(LoginCommand message, CancellationToken cancellationToken)
+        {
+            if (!ValidateCommand(message)) return false;
+
+            return await _aspnetusersExecuteCommand.Login(message, cancellationToken);
+        }
+        public async Task<bool> Handle(LogOutCommand message, CancellationToken cancellationToken)
+        {
+            if (!ValidateCommand(message)) return false;
+
+            return await _aspnetusersExecuteCommand.LogOut(message, cancellationToken);
+        }
+
         private bool ValidateCommand(Command message)
         {
             if (message.EhValido()) return true;

@@ -11,5 +11,8 @@ namespace Base30.Authentication.Domain
         Task Create(IdentityUser<Guid> aspnetusers);
         void SyncCreate(AspNetUsersNoSql aspnetusersNoSql);
         AspNetUsersNoSql? LoadByIdNoSql(Guid id);
+        IdentityUser<Guid>? GetUserByEmail(string email);
+        Task<SignInResult> Login(IdentityUser<Guid> user, string password);
+        bool LogOut();
     }
 }
