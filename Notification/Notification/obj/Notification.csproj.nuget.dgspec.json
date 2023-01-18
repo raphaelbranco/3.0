@@ -1,0 +1,173 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Notification\\Notification\\Notification.csproj": {}
+  },
+  "projects": {
+    "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj",
+        "projectName": "Base30.Core",
+        "projectPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj",
+        "packagesPath": "C:\\Users\\rbranco\\.nuget\\packages\\",
+        "outputPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rbranco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Notification\\Notification\\Notification.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Notification\\Notification\\Notification.csproj",
+        "projectName": "Notification",
+        "projectPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Notification\\Notification\\Notification.csproj",
+        "packagesPath": "C:\\Users\\rbranco\\.nuget\\packages\\",
+        "outputPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Notification\\Notification\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rbranco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj": {
+                "projectPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.58.0, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.58.0.2923, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

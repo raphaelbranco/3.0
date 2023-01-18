@@ -15,6 +15,7 @@ namespace Base30.SysAdmin.Application.Controllers
         private readonly IMediatoRHandler _mediatoRHandler;
         private readonly ICoreController _coreController;
         private readonly IAspNetUsersQueries _aspnetusersQueries;
+        
 
         public UsersController(IMediatoRHandler mediatoRHandler,
                               ICoreController coreController,
@@ -25,10 +26,10 @@ namespace Base30.SysAdmin.Application.Controllers
             _aspnetusersQueries = aspnetusersQueries;
         }
         [HttpPost]
-        public async Task<IActionResult> Create(string email = "teste@2.com", string password = "12345S#s1", string phonenumber= "(11)99999-9999")
+        public async Task<IActionResult> Create(string email = "teste@2.com", string password = "12345S#s1", string phonenumber = "(11)99999-9999")
         {
             string username = email;
-                
+
             AspNetUsersCreateCommand command = new AspNetUsersCreateCommand(DateTime.Now, DateTime.Now, Guid.NewGuid(), username, email, password, phonenumber);
             await _mediatoRHandler.SendCommand(command);
 
@@ -74,5 +75,8 @@ namespace Base30.SysAdmin.Application.Controllers
             var notification = _coreController.GetErrorMessage();
             return Ok(notification);
         }
+
+
     }
+
 }

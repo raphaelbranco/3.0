@@ -1,9 +1,11 @@
 using Authentication.Application.Setup;
 using Authentication.Data;
+using MassTransit;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,26 +41,45 @@ builder.Services.Configure<NoSqlSettings>(options =>
     options.ConnectionString = builder.Configuration.GetSection("AuthenticationNoSqlDatabase:ConnectionString").Value;
     options.Database = builder.Configuration.GetSection("AuthenticationNoSqlDatabase:DatabaseName").Value;
 });
-
-
 //*** Mongo DB
 
-//Google Mail
-builder.Services.AddAuthentication(options =>
+
+//MassTransit
+builder.Services.AddMassTransit(x =>
 {
-    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-})
-        .AddCookie(options =>
+    x.SetKebabCaseEndpointNameFormatter();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost", "/", h =>
         {
-            options.LoginPath = "/google-login"; // Must be lowercase
         });
 
+        cfg.ConfigureEndpoints(context);
+    });
+});
+
+builder.Services.AddOptions<MassTransitHostOptions>()
+.Configure(options =>
+{
+    // if specified, waits until the bus is started before
+    // returning from IHostedService.StartAsync
+    // default is false
+    options.WaitUntilStarted = true;
+
+    // if specified, limits the wait time when starting the bus
+    options.StartTimeout = TimeSpan.FromSeconds(10);
+
+    // if specified, limits the wait time when stopping the bus
+    options.StopTimeout = TimeSpan.FromSeconds(30);
+});
+
+
+builder.Services.AddCors();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddCors();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

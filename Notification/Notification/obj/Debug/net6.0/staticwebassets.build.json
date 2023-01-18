@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "V2B27dXquhzY1UjcPuXDbZ2HwtKBH0gBpclu7ylloOk=",
+  "Source": "Notification",
+  "BasePath": "_content/Notification",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Notification\\wwwroot",
+      "Source": "Notification",
+      "ContentRoot": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Notification\\Notification\\wwwroot\\",
+      "BasePath": "_content/Notification",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -52,4 +52,5 @@ namespace Authentication.Application.Setup
             services.AddScoped<INotificationHandler<AspNetUsersFailedEvent>, AuthenticationEventHandler>();
         }
     }
+
 }

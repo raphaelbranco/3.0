@@ -106,3 +106,10 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentic
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\Authentication.Domain.dll
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\Authentication.Domain.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\MassTransit.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\MassTransit.Abstractions.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\MassTransit.AspNetCoreIntegration.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Application\bin\Debug\net6.0\System.Text.Json.dll

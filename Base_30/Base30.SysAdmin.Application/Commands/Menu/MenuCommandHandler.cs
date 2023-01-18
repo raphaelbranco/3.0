@@ -1,7 +1,9 @@
 ﻿using Base30.Core.Communication.Mediator;
 using Base30.Core.Messages;
 using Base30.Core.Messages.CommonMessages.Notifications;
+using Base30.Core.Messages.IntegrationEvents;
 using Base30.SysAdmin.Application.Commands.Menu.Commands;
+using MassTransit;
 using MediatR;
 
 namespace Base30.SysAdmin.Application.Commands.Menu
