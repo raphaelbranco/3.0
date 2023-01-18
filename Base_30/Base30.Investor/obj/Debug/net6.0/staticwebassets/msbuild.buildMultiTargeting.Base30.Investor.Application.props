@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Base30.Investor.Application.props" />
-</Project>

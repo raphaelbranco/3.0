@@ -6,7 +6,6 @@ namespace Base30.SysAdmin.Application.Commands.Menu
     {
         Task<bool> Create(MenuCreateCommand message, CancellationToken cancellationToken);
         Task<bool> SyncCreate(MenuSyncNoSqlCreateCommand message, CancellationToken cancellationToken);
-
         Task<bool> Update(MenuUpdateCommand message, CancellationToken cancellationToken);
         
     }

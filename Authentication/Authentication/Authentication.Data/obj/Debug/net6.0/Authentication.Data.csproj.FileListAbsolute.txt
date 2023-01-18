@@ -1,8 +1,10 @@
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Data.deps.json
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Data.dll
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Data.pdb
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Domain.dll
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Base30.Core.dll
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Base30.Core.pdb
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Domain.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\obj\Debug\net6.0\Authentication.Data.csproj.AssemblyReference.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\obj\Debug\net6.0\Authentication.Data.GeneratedMSBuildEditorConfig.editorconfig
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\obj\Debug\net6.0\Authentication.Data.AssemblyInfoInputs.cache
@@ -13,5 +15,3 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentic
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\obj\Debug\net6.0\refint\Authentication.Data.dll
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\obj\Debug\net6.0\Authentication.Data.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\obj\Debug\net6.0\ref\Authentication.Data.dll
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Domain.dll
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Authentication\Authentication\Authentication.Data\bin\Debug\net6.0\Authentication.Domain.pdb

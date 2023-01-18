@@ -3,21 +3,16 @@ using AutoMapper;
 using Azure.Core;
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using Base30.Authentication.Application.Events.AspNetUsers;
-using Base30.Authentication.Application.Queries.AspNetUsers;
-using Base30.Authentication.Data.Repository;
 using Base30.Authentication.Domain;
 using Base30.Core.Communication.Mediator;
 using Base30.Core.Messages.CommonMessages.Notifications;
-using FluentResults;
 using Microsoft.AspNetCore.Identity;
-using System.Linq.Expressions;
 
 namespace Base30.Authentication.Application.Commands.AspNetUsers
 {
     public class AspNetUsersExecuteCommand : IAspNetUsersExecuteCommand
     {
         private readonly IAspNetUsersRepository _aspnetusersRepository;
-        private readonly IMapper _mapper;
         private readonly IMediatoRHandler _mediatoRHandler;
 
         public AspNetUsersExecuteCommand(IAspNetUsersRepository aspnetusersRepository, IMediatoRHandler mediatoRHandler)
@@ -72,18 +67,6 @@ namespace Base30.Authentication.Application.Commands.AspNetUsers
             _aspnetusersRepository.SyncCreate(aspnetusers);
 
             return Task.FromResult(true);
-        }
-       
-        private async Task<bool> CommitCommand(Domain.AspNetUsers aspnetusers)
-        {
-            bool sucess = await _aspnetusersRepository.UnitOfWork.Commit() == false;
-            if (!sucess)
-            {
-                AspNetUsersFailedEvent newAspNetUsersFailedEvent = new("Error creating AspNetUsers on DB");
-                aspnetusers.AddEvent(newAspNetUsersFailedEvent);
-            }
-
-            return sucess;
         }
 
         public async Task<bool> Login(LoginCommand message, CancellationToken cancellationToken)

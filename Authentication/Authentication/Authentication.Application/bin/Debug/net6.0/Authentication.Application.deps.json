@@ -9,6 +9,7 @@
       "Authentication.Application/1.0.0": {
         "dependencies": {
           "Authentication.Data": "1.0.0",
+          "Authentication.Domain": "1.0.0",
           "AutoMapper": "12.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Base30.Core": "1.0.0",

@@ -2,10 +2,8 @@ using Authentication.Application.Setup;
 using Authentication.Data;
 using MassTransit;
 using MediatR;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 

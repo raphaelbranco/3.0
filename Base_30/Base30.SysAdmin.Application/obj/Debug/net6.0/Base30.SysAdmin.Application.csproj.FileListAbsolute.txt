@@ -128,12 +128,6 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6
 D:\Raphael\Pessoal\TFS\v3\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
 D:\Raphael\Pessoal\TFS\v3\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
 D:\Raphael\Pessoal\TFS\v3\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cs
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.csproj.AssemblyReference.cache
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.AssemblyInfoInputs.cache
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.AssemblyInfo.cs
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.csproj.CoreCompileInputs.cache
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\appsettings.Development.json
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\appsettings.json
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\Base30.SysAdmin.Application.exe
@@ -211,6 +205,13 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\Base30.Core.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\Base30.SysAdmin.Data.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\Base30.SysAdmin.Domain.pdb
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.csproj.AssemblyReference.cache
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.AssemblyInfoInputs.cache
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.AssemblyInfo.cs
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.csproj.CoreCompileInputs.cache
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cs
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\staticwebassets\msbuild.Base30.SysAdmin.Application.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\staticwebassets\msbuild.build.Base30.SysAdmin.Application.props
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Base30.SysAdmin.Application.props
@@ -225,4 +226,3 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.genruntimeconfig.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\ref\Base30.SysAdmin.Application.dll
-D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.MvcApplicationPartsAssemblyInfo.cs

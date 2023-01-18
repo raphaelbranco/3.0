@@ -38,10 +38,8 @@ builder.Services.Configure<NoSqlSettings>(options =>
 //MassTransit
 builder.Services.AddMassTransit(x =>
 {
-    x.AddConsumer<MenuCommandHandler>();
     x.SetKebabCaseEndpointNameFormatter();
     
-
     x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
     {
 
@@ -51,8 +49,6 @@ builder.Services.AddMassTransit(x =>
         {
             ep.PrefetchCount = 10;
             ep.UseMessageRetry(r => r.Interval(2, 100));
-            ep.ConfigureConsumer<MenuCommandHandler>(provider);
-            
         });
     }));
 });

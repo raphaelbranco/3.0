@@ -46,25 +46,17 @@ namespace Base30.Authentication.Data.Repository
             if (resIdentity.Succeeded)
             {
                 Task<string>? code = _userManager.GenerateEmailConfirmationTokenAsync(userIdentity);
-                //Result resEnvioEmail = _emailService.EnviarEmail(new[] { usuarioIdentity.Email }, "Link de Ativação", usuarioIdentity.Id, code.Result);
                 return;
             }
 
-            await _mediatorHandler.PublishNotification(new DomainNotification("Falha ao cadastrar usuário", resIdentity.ToString()));
+            await _mediatorHandler.PublishNotification(new DomainNotification("Failed creating user", resIdentity.ToString()));
         }
 
         public async void SyncCreate(AspNetUsersNoSql aspnetusersNoSql)
         {
             await _contextNoSql.AspNetUsersNoSql.InsertOneAsync(aspnetusersNoSql);
         }
-
-        public AspNetUsers LoadById(Guid id)
-        {
-            //AspNetUsers? aspnetusers = _context.AspNetUsers?.AsNoTracking().Where(m => m.AspNetUsersId == id).SingleOrDefault();
-            return null;
-        }
-
-       
+               
         public AspNetUsersNoSql? LoadByIdNoSql(Guid id)
         {
             Task<AspNetUsersNoSql>? aspnetusersNosqlTask = _contextNoSql.AspNetUsersNoSql?.Find(item => item.AspNetUsersId == id).FirstOrDefaultAsync();
@@ -95,6 +87,8 @@ namespace Base30.Authentication.Data.Repository
         public void Dispose()
         {
             _context?.Dispose();
+            _contextNoSql?.Dispose();
+            _userManager?.Dispose();            
         }
 
         

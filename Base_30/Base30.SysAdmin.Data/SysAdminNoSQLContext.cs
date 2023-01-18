@@ -35,7 +35,7 @@ namespace Base30.SysAdmin.Data
             }
         }
 
-        public async Task<bool> Commit(ReplaceOneResult result)
+        public bool Commit(ReplaceOneResult result)
         {
             bool sucess = result.IsAcknowledged && result.ModifiedCount > 0;
             //if (sucess) await _mediatoRHandler.PublishEvents(this);

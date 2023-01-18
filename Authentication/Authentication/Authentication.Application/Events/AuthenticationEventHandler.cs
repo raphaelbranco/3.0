@@ -2,7 +2,6 @@
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using Base30.Authentication.Application.Events.AspNetUsers;
 using MediatR;
-using MassTransit.Transports;
 using MassTransit;
 using Base30.Core.Messages.IntegrationEvents;
 
@@ -26,7 +25,7 @@ namespace Authentication.Application.Events
             AspNetUsersSyncNoSqlCreateCommand command = new AspNetUsersSyncNoSqlCreateCommand(notification.Id, DateTime.Now, DateTime.Now, notification.UserUpd, notification.SysCustomer, notification.UserName, notification.NormalizedUserName, notification.Email, notification.NormalizedEmail, notification.EmailConfirmed, notification.PasswordHash, notification.SecurityStamp, notification.ConcurrencyStamp, notification.PhoneNumber, notification.PhoneNumberConfirmed, notification.TwoFactorEnabled, notification.LockoutEnd, notification.LockoutEnabled, notification.AccessFailedCount);
             await _mediatoRHandler.SendCommand(command);
 
-            await publishEndpoint.Publish<SendEmailEvent>(new SendEmailEvent(notification.Email!));
+            await publishEndpoint.Publish(new SendEmailEvent(notification.Email!));
         }
         public Task Handle(AspNetUsersFailedEvent notification, CancellationToken cancellationToken)
         {

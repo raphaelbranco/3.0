@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Authentication.Data
 {
-    public class AuthenticationDBContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>, IUnitOfWork //DbContext
+    public class AuthenticationDBContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>, IUnitOfWork 
     {
         private readonly IMediatoRHandler _mediatorHandler;
 

@@ -14,7 +14,6 @@ namespace Base30.SysAdmin.Application.Commands.Menu
 
         public async Task<bool> Create(MenuCreateCommand message, CancellationToken cancellationToken)
         {
-            //Add Menu on DB teste 2
             Domain.Menu menu = new(DateTime.Now, DateTime.Now, message.UserUpd, message.SysCustomer, true, message.Name, message.Description, message.Order, message.SourceMenu);
             _menuRepository.Create(menu);
 

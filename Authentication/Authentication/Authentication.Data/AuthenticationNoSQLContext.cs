@@ -2,11 +2,6 @@
 using Base30.Core.Data;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Authentication.Data
 {
@@ -29,10 +24,9 @@ namespace Authentication.Data
                 return _database!.GetCollection<AspNetUsersNoSql>("AspNetUsers");
             }
         }
-        public async Task<bool> Commit(ReplaceOneResult result)
+        public bool Commit(ReplaceOneResult result)
         {
             bool sucess = result.IsAcknowledged && result.ModifiedCount > 0;
-
             return sucess;
         }
 

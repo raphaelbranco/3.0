@@ -28,8 +28,7 @@ namespace Authentication.Application.Setup
 
             //Mediator
             services.AddScoped<IMediatoRHandler, MediatRHandler>();
-
-            
+                        
 
             //**** Repository ****
             services.AddScoped<IAspNetUsersRepository, AspNetUsersRepository>();

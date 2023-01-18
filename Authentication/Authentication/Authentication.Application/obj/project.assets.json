@@ -5378,6 +5378,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Authentication.Data >= 1.0.0",
+      "Authentication.Domain >= 1.0.0",
       "AutoMapper >= 12.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Base30.Core >= 1.0.0",
@@ -5420,6 +5421,9 @@
           "projectReferences": {
             "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Authentication\\Authentication\\Authentication.Data\\Authentication.Data.csproj": {
               "projectPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Authentication\\Authentication\\Authentication.Data\\Authentication.Data.csproj"
+            },
+            "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Authentication\\Authentication\\Authentication.Domain\\Authentication.Domain.csproj": {
+              "projectPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Authentication\\Authentication\\Authentication.Domain\\Authentication.Domain.csproj"
             },
             "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj": {
               "projectPath": "D:\\Raphael\\Pessoal\\TFS\\v3\\3.0\\Base30\\3.0\\Base_30\\Base30.Core\\Base30.Core.csproj"

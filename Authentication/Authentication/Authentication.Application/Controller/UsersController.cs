@@ -33,13 +33,11 @@ namespace Base30.SysAdmin.Application.Controllers
             AspNetUsersCreateCommand command = new AspNetUsersCreateCommand(DateTime.Now, DateTime.Now, Guid.NewGuid(), username, email, password, phonenumber);
             await _mediatoRHandler.SendCommand(command);
 
-
             if (_coreController.OperationIsValid()) return Ok();
 
             var notification = _coreController.GetErrorMessage();
             return Ok(notification);
         }
-
 
         [HttpGet]
         public IActionResult LoadById(Guid id)

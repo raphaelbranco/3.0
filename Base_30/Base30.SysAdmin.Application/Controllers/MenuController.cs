@@ -3,7 +3,6 @@ using Base30.Core.Communication.Mediator;
 using Base30.Core.DomainObjects;
 using Base30.SysAdmin.Application.Commands.Menu.Commands;
 using Base30.SysAdmin.Application.Queries.Menu;
-using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Base30.SysAdmin.Application.Controllers
@@ -37,24 +36,16 @@ namespace Base30.SysAdmin.Application.Controllers
         }
 
 
-
         [HttpPost]
         public async Task<IActionResult> Create(string nome, int order)
         {
             MenuCreateCommand command = new MenuCreateCommand(new Guid(), new Guid(), nome, nome, null, order);
-            //_bus.Send(command).Wait();
             await _mediatoRHandler.SendCommand(command);
 
-
-            if (_coreController.OperationIsValid())
-            {
-                return Ok();
-            }
-            else
-            {
-                var notification = _coreController.GetErrorMessage();                
-                return Ok(notification);
-            }
+            if (_coreController.OperationIsValid()) return Ok();
+            
+            var notification = _coreController.GetErrorMessage();                
+            return Ok(notification);
         }
 
         [HttpPut]
@@ -63,17 +54,10 @@ namespace Base30.SysAdmin.Application.Controllers
             MenuUpdateCommand command = new MenuUpdateCommand(id, new Guid(), nome, nome, null, order);
             await _mediatoRHandler.SendCommand(command);
 
-
-            if (_coreController.OperationIsValid())
-            {
-                return Ok();
-            }
-            else
-            {
-                var notification = _coreController.GetErrorMessage();
-                return Ok(notification);
-            }
-
+            if (_coreController.OperationIsValid()) return Ok();
+            
+            var notification = _coreController.GetErrorMessage();
+            return Ok(notification);
         }
     }
 }

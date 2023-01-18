@@ -17,7 +17,6 @@ namespace Base30.SysAdmin.Application.Queries.Menu
 
         public async Task<IEnumerable<MenuDto>> GetAll()
         {
-            //IEnumerable<MenuNoSql>? menuList = await _menuRepository.GetAll();
             IEnumerable<Domain.MenuNoSql>? menuList = await _menuRepository.GetAll();
             IEnumerable<MenuDto> menuDto = _mapper.Map<IEnumerable<MenuDto>>(menuList);
             return menuDto;
