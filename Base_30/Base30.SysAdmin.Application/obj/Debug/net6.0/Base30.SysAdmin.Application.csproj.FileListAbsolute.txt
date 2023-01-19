@@ -226,3 +226,4 @@ D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.pdb
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\Base30.SysAdmin.Application.genruntimeconfig.cache
 D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\obj\Debug\net6.0\ref\Base30.SysAdmin.Application.dll
+D:\Raphael\Pessoal\TFS\v3\3.0\Base30\3.0\Base_30\Base30.SysAdmin.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

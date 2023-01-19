@@ -1,7 +1,6 @@
 ﻿using Base30.Core.Communication.Mediator;
 using Base30.Core.Messages;
 using Base30.Core.Messages.CommonMessages.Notifications;
-using Base30.Authentication.Application.Commands.AspNetUsers;
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using MediatR;
 using Authentication.Application.Commands.Users.Command;

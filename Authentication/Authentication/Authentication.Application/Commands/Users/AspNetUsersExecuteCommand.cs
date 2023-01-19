@@ -1,4 +1,5 @@
 ﻿using Authentication.Application.Commands.Users.Command;
+using Authentication.Application.Queries.User.Services;
 using AutoMapper;
 using Azure.Core;
 using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
@@ -7,6 +8,7 @@ using Base30.Authentication.Domain;
 using Base30.Core.Communication.Mediator;
 using Base30.Core.Messages.CommonMessages.Notifications;
 using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 
 namespace Base30.Authentication.Application.Commands.AspNetUsers
 {
@@ -14,11 +16,12 @@ namespace Base30.Authentication.Application.Commands.AspNetUsers
     {
         private readonly IAspNetUsersRepository _aspnetusersRepository;
         private readonly IMediatoRHandler _mediatoRHandler;
+        
 
         public AspNetUsersExecuteCommand(IAspNetUsersRepository aspnetusersRepository, IMediatoRHandler mediatoRHandler)
         {
             _aspnetusersRepository = aspnetusersRepository;
-            _mediatoRHandler = mediatoRHandler;
+            _mediatoRHandler = mediatoRHandler;            
         }
 
         public async Task<bool> Create(AspNetUsersCreateCommand message, CancellationToken cancellationToken)
@@ -85,7 +88,7 @@ namespace Base30.Authentication.Application.Commands.AspNetUsers
             //Wrong password
             if (!resLogin.Succeeded)
             {
-                await _mediatoRHandler.PublishNotification(new DomainNotification("Login failed", "Login failed"));                
+                await _mediatoRHandler.PublishNotification(new DomainNotification("Login failed", "Login failed"));
                 return false;
             }
 

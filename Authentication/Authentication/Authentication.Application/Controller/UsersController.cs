@@ -5,6 +5,8 @@ using Base30.Authentication.Application.Commands.AspNetUsers.Commands;
 using Base30.Authentication.Application.Queries.AspNetUsers;
 using Microsoft.AspNetCore.Mvc;
 using Authentication.Application.Commands.Users.Command;
+using Authentication.Application.Queries.User.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Base30.SysAdmin.Application.Controllers
 {
@@ -15,15 +17,17 @@ namespace Base30.SysAdmin.Application.Controllers
         private readonly IMediatoRHandler _mediatoRHandler;
         private readonly ICoreController _coreController;
         private readonly IAspNetUsersQueries _aspnetusersQueries;
-        
+        private readonly ITokenService _tokenService;
 
         public UsersController(IMediatoRHandler mediatoRHandler,
                               ICoreController coreController,
-                              IAspNetUsersQueries aspnetusersQueries)
+                              IAspNetUsersQueries aspnetusersQueries,
+                              ITokenService tokenService)
         {
             _mediatoRHandler = mediatoRHandler;
             _coreController = coreController;
             _aspnetusersQueries = aspnetusersQueries;
+            _tokenService = tokenService;
         }
         [HttpPost]
         public async Task<IActionResult> Create(string email = "teste@2.com", string password = "12345S#s1", string phonenumber = "(11)99999-9999")
@@ -39,6 +43,7 @@ namespace Base30.SysAdmin.Application.Controllers
             return Ok(notification);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult LoadById(Guid id)
         {
@@ -56,7 +61,11 @@ namespace Base30.SysAdmin.Application.Controllers
             await _mediatoRHandler.SendCommand(command);
 
 
-            if (_coreController.OperationIsValid()) return Ok();
+            if (_coreController.OperationIsValid())
+            {
+                string token = _tokenService.CreateToken(email, "");
+                return Ok(token);
+            }
 
             var notification = _coreController.GetErrorMessage();
             return Ok(notification);

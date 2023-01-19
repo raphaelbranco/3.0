@@ -3,7 +3,10 @@ using Base30.Core.Communication.Mediator;
 using Base30.Core.DomainObjects;
 using Base30.SysAdmin.Application.Commands.Menu.Commands;
 using Base30.SysAdmin.Application.Queries.Menu;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Cryptography;
 
 namespace Base30.SysAdmin.Application.Controllers
 {
@@ -25,6 +28,7 @@ namespace Base30.SysAdmin.Application.Controllers
             _menuQueries = menuQueries;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -35,7 +39,7 @@ namespace Base30.SysAdmin.Application.Controllers
             return Ok(menuDto);
         }
 
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create(string nome, int order)
         {
@@ -48,6 +52,7 @@ namespace Base30.SysAdmin.Application.Controllers
             return Ok(notification);
         }
 
+        [Authorize]
         [HttpPut]
         public async Task<IActionResult> Update(Guid id, string nome, int order)
         {
@@ -59,5 +64,6 @@ namespace Base30.SysAdmin.Application.Controllers
             var notification = _coreController.GetErrorMessage();
             return Ok(notification);
         }
+
     }
 }

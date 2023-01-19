@@ -27,13 +27,6 @@ namespace Base30.SysAdmin.Data
             }
         }
 
-        public IMongoCollection<SearchNoSql> SearchNoSql
-        {
-            get
-            {
-                return _database!.GetCollection<SearchNoSql>("Search");
-            }
-        }
 
         public bool Commit(ReplaceOneResult result)
         {

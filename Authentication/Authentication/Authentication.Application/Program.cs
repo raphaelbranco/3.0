@@ -20,6 +20,8 @@ builder.Services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>()
         .AddEntityFrameworkStores<AuthenticationDBContext>()
         .AddDefaultTokenProviders();
 
+
+
 //***
 
 builder.Services.RegisterServices();

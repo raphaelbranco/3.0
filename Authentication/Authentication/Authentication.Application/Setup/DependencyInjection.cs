@@ -11,6 +11,7 @@ using Authentication.Application.Events;
 using Base30.Core.Communication.Mediator;
 using Microsoft.AspNetCore.Identity;
 using Authentication.Application.Commands.Users.Command;
+using Authentication.Application.Queries.User.Services;
 
 namespace Authentication.Application.Setup
 {
@@ -35,6 +36,10 @@ namespace Authentication.Application.Setup
 
             //**** Queries ****
             services.AddScoped<IAspNetUsersQueries, AspNetUsersQueries>();
+
+            //**** Services ****
+            services.AddScoped<ITokenService, TokenService>();
+            
 
 
             //****Commands * *** /
