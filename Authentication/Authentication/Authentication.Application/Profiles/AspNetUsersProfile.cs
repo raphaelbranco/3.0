@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using Base30.Authentication.Application.Queries.AspNetUsers;
+﻿using Authentication.Application.Dto;
+using AutoMapper;
 using Base30.Authentication.Domain;
 using Microsoft.AspNetCore.Identity;
 

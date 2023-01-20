@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Authentication.Application.Commands.Users.Command;
 using Authentication.Application.Queries.User.Services;
 using Microsoft.AspNetCore.Authorization;
+using Authentication.Application.Dto;
 
 namespace Base30.SysAdmin.Application.Controllers
 {
@@ -55,15 +56,15 @@ namespace Base30.SysAdmin.Application.Controllers
         }
 
         [HttpPost("/Login")]
-        public async Task<IActionResult> Login(string email = "teste@14.com", string password = "12345S#s1")
+        public async Task<IActionResult> Login(LoginDto login)
         {
-            LoginCommand command = new LoginCommand(email, password);
+            LoginCommand command = new LoginCommand(login.email, login.password);
             await _mediatoRHandler.SendCommand(command);
 
 
             if (_coreController.OperationIsValid())
             {
-                string token = _tokenService.CreateToken(email, "");
+                string token = _tokenService.CreateToken(login.email, "");
                 return Ok(token);
             }
 
@@ -72,9 +73,9 @@ namespace Base30.SysAdmin.Application.Controllers
         }
 
         [HttpPost("/LogOut")]
-        public async Task<IActionResult> LogOut(string email = "teste@14.com")
+        public async Task<IActionResult> LogOut(LogOutDto logout)
         {
-            LogOutCommand command = new LogOutCommand(email);
+            LogOutCommand command = new LogOutCommand(logout.email);
             await _mediatoRHandler.SendCommand(command);
 
             if (_coreController.OperationIsValid()) return Ok();
@@ -85,5 +86,6 @@ namespace Base30.SysAdmin.Application.Controllers
 
 
     }
+
 
 }

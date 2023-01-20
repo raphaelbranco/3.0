@@ -1,4 +1,6 @@
-﻿namespace Base30.Authentication.Application.Queries.AspNetUsers
+﻿using Authentication.Application.Dto;
+
+namespace Base30.Authentication.Application.Queries.AspNetUsers
 {
     public interface IAspNetUsersQueries : IDisposable
     {

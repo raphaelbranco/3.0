@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Authentication.Application.Dto;
+using AutoMapper;
 using Base30.Authentication.Domain;
 
 

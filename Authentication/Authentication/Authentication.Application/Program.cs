@@ -77,12 +77,11 @@ builder.Services.AddOptions<MassTransitHostOptions>()
 
 builder.Services.AddCors();
 
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
 
 //Swagger authorization
 builder.Services.AddSwaggerGen(c =>
@@ -116,6 +115,8 @@ builder.Services.AddSwaggerGen(c =>
 
 
 var app = builder.Build();
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

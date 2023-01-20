@@ -1,18 +1,18 @@
-import estilos from './NavBar.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './NavBar.module.scss';
 
 const NavBar = () => {
     return (
-        <nav className={estilos.Link}>
+        <nav className={styles.Link}>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/menu">Home</Link>
                 </li>
                 <li>
-                    <Link to="/admin">Admin</Link>
+                    <Link to="/menu_create">Criar Menu</Link>
                 </li>
                 <li>
-                    <Link to="/admin/menu">Menu</Link>
+                    <Link to="/logout">LogOut</Link>
                 </li>
             </ul>
         </nav>

@@ -1,17 +1,29 @@
+import LogOutForm from 'modules/Autentication/LogOutForm/LogOutForm';
+import Menu from 'modules/SysAdmin/Menu/MenuListForm';
 import { Routes, Route } from 'react-router-dom';
-import Home from './shared/modules/home/home';
-import AdminBasePage from './modules/SysAdmin/BasePage/BasePage';
-import Menu from './modules/SysAdmin/Menu/Menu';
+import LoginForm from './modules/Autentication/LoginForm/LogInForm';
+import { GetTokenFromStorage } from 'state/hooks/useToken';
+import NavBar from 'components/NavBar/NavBar';
+import MenuCreate from 'modules/SysAdmin/Menu/MenuCreateForm';
 
 function App() {
-    return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            
-            <Route path='/admin' element={<AdminBasePage />} />
-            <Route path="/admin/menu" element={<Menu />} />
+    const token = GetTokenFromStorage();    
+    
+    if(!token) {
+        return <LoginForm />;
+    }
 
-        </Routes>
+    return (
+        <>
+            <NavBar />   
+            <Routes>                            
+                <Route path="/" element={<Menu />} />   
+                <Route path="/menu" element={<Menu />} />   
+                <Route path="/menu_create" element={<MenuCreate />} />   
+                <Route path="/login" element={<LoginForm />} />            
+                <Route path="/logout" element={<LogOutForm />} />                        
+            </Routes>
+        </>
     );
 }
 
