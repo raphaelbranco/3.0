@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8BLIaTzpEKlY5wJc/d/1qnBXRqw71ttP3aTokjlBIwI=",
+  "Source": "Authentication.Application",
+  "BasePath": "_content/Authentication.Application",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
