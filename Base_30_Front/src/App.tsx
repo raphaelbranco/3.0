@@ -1,27 +1,26 @@
-import LogOutForm from 'modules/Autentication/LogOutForm/LogOutForm';
-import Menu from 'modules/SysAdmin/Menu/MenuListForm';
 import { Routes, Route } from 'react-router-dom';
-import LoginForm from './modules/Autentication/LoginForm/LogInForm';
-import { GetTokenFromStorage } from 'state/hooks/useToken';
-import NavBar from 'components/NavBar/NavBar';
-import MenuCreate from 'modules/SysAdmin/Menu/MenuCreateForm';
-
+import { LoginFactory } from './Authentication/Main/Factory/Factories/Pages/LoginFactory';
+import NavBar from './Core/Presentation/Components/NavBar/NavBar';
+import MenuCreate from './Core/Presentation/Menu/MenuCreateForm';
+import MenuList from './Core/Presentation/Menu/MenuListForm';
+import { MakeLocalStorage } from './Core/Main/Factories/MakeLocalStorage';
+import { LogOutFactory } from './Authentication/Main/Factory/Factories/Pages/LogOutFactory';
+  
 function App() {
-    const token = GetTokenFromStorage();    
-    
-    if(!token) {
-        return <LoginForm />;
-    }
+    const userAccount = MakeLocalStorage().getStorage('accountUser');    
 
+    if(!userAccount) return <LoginFactory  />;
+    
     return (
         <>
             <NavBar />   
-            <Routes>                            
-                <Route path="/" element={<Menu />} />   
-                <Route path="/menu" element={<Menu />} />   
+            <Routes>                                            
+                <Route path="/" element={<MenuList />} />   
+                <Route path="/login" element={<LoginFactory />} />            
+                <Route path="/logout" element={<LogOutFactory />} />                        
+
+                <Route path="/menu" element={<MenuList />} />   
                 <Route path="/menu_create" element={<MenuCreate />} />   
-                <Route path="/login" element={<LoginForm />} />            
-                <Route path="/logout" element={<LogOutForm />} />                        
             </Routes>
         </>
     );

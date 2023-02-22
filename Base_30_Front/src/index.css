@@ -8,7 +8,7 @@ body {
 
   background-color: #3a9bdb;
   background-image: linear-gradient(90deg, #60b6f0 0%, #8a8dcc 100%);
-  background-image: url( './assets/background.svg' );
+  background-image: url( '../src/Core/assets/background.svg' );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center, 10%, 10%;

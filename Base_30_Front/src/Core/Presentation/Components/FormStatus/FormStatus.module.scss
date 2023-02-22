@@ -1,0 +1,41 @@
+@import "../../Styles/Colors.module.scss";
+
+.errorWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainError {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  margin-top: 20px;
+  background-color: $errorBackground; 
+  color: $primaryError; /* cor de texto vermelho para melhorar a legibilidade */
+  font-weight: bold; /* texto em negrito para destacar o erro */
+  padding: 10px; /* espaço interno para o texto */
+  box-sizing: border-box; /* inclui o padding na largura total */
+  text-align: center;
+}
+
+.mainError--fadeout {
+  animation-name: fadeOut;
+  animation-duration: 2s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

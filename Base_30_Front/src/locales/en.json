@@ -1,0 +1,16 @@
+{
+    "translation" : {
+        "error": {
+            "unspecific": "Something went wrong.",
+            "InvalidCredentials": "Invalid Credentials",
+            "InvalidFieldsCompletion": "Make sure the fields are filled in correctly",
+            "InvalidValue": "Invalid Value",
+            "404": "The page was not found.",
+            "RequiredFieldError": "Mandatory field"
+        },
+        "login": {
+            "TypeEmail": "Type your e-mail",
+            "TypePassword": "Type your password"
+        }
+    }
+}

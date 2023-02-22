@@ -19,9 +19,23 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*", "Core/*"],
+      "@/tests/*": ["../tests/*"],      
+    },
 		"downlevelIteration": true,
-		"plugins": [{ "name": "typescript-plugin-css-modules" }]
+		"plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "noImplicitAny": true,    
+    "noImplicitReturns": true,
+    "allowUnusedLabels": false,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true, 
+    "removeComments": true,
+    "strictNullChecks": true ,
+    "experimentalDecorators": true    
   },
   "include": [
     "src"

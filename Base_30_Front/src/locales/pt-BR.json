@@ -1,0 +1,20 @@
+{
+    "translation" : {
+        "error": {
+            "unspecific": "Algo de Errado ocorreu.",
+            "InvalidCredentials": "E-mail ou senha incorretos",
+            "InvalidFieldsCompletion": "Verifique se os campos estão preenchidos corretamente",
+            "InvalidValue": "Valor inválido",
+            "404": "Pagina não encontrada.",
+            "RequiredFieldError": "Campo obrigatório"
+        },
+        "login": {
+            "TypeEmail": "Digite seu e-mail",
+            "TypePassword": "Digite sua senha"
+        },
+        "common": {
+            "logOut": "Sair"
+        }
+    }
+    
+}

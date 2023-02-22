@@ -69,7 +69,7 @@ namespace Base30.SysAdmin.Application.Controllers
             }
 
             var notification = _coreController.GetErrorMessage();
-            return Ok(notification);
+            return Unauthorized(notification);
         }
 
         [HttpPost("/LogOut")]
