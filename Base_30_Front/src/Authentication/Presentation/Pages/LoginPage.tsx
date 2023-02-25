@@ -39,7 +39,7 @@ const LoginPage: React.FC<Props> = ({loginController}: Props) => {
             mainError(error);
         }
         else {            
-            navigate('/menu');
+            navigate('/');
             navigate(0);
         }
     };

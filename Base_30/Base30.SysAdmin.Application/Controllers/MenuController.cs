@@ -41,9 +41,9 @@ namespace Base30.SysAdmin.Application.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create(string nome, int order)
+        public async Task<IActionResult> Create(MenuDto menuCreate)
         {
-            MenuCreateCommand command = new MenuCreateCommand(new Guid(), new Guid(), nome, nome, null, order);
+            MenuCreateCommand command = new MenuCreateCommand(new Guid(), new Guid(), menuCreate.name, menuCreate.name, null, menuCreate.order);
             await _mediatoRHandler.SendCommand(command);
 
             if (_coreController.OperationIsValid()) return Ok();

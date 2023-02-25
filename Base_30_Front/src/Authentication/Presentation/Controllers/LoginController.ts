@@ -2,8 +2,8 @@ import { ILoginController } from './ILoginController';
 import { ILoginValidation } from '../Validation/ILoginValidation';
 import { ILoginService } from '../../Data/LoginService/ILoginService';
 import { InputValidation } from '@/src/Core/Validation/Protocols/InputListValidation';
-import { LoginDTO } from '../../Model/Dto/LoginDto';
-import { UserDTO } from '../../Model/Dto/UserDto';
+import { LoginDTO } from '../../Domain/Dto/LoginDto';
+import { UserDTO } from '../../Domain/Dto/UserDto';
 import { ILocalStorage } from '@/src/Core/Infrastructure/Cache/ILocalStorage';
 import i18next from 'i18next';
 

@@ -5,15 +5,31 @@
             "InvalidCredentials": "E-mail ou senha incorretos",
             "InvalidFieldsCompletion": "Verifique se os campos estão preenchidos corretamente",
             "InvalidValue": "Valor inválido",
-            "404": "Pagina não encontrada.",
+            "404": "Pagina não encontrada.",            
             "RequiredFieldError": "Campo obrigatório"
         },
         "login": {
             "TypeEmail": "Digite seu e-mail",
             "TypePassword": "Digite sua senha"
         },
+        "menu": {
+            "CreateMenu": "Novo Menu",
+            "TypeMenuName": "Digite o nome do menu",
+            "TypeOrderNumber": "Digite a ordem da exibição do menu",
+            "Saved": "Novo menu criado com sucesso"
+        },
         "common": {
-            "logOut": "Sair"
+            "logOut": "Sair",
+            "Save": "Salvar",
+            "Name": "Nome",
+            "Order": "Ordem de Exibição",
+            "Success": "Sucesso"
+        },
+        "nav": {
+            "Home": "Início",
+            "MenuList": "Lista",
+            "CreateMenu": "Criar",
+            "LogOut": "Sair"
         }
     }
     

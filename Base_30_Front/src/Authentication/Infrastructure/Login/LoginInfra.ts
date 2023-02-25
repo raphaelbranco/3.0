@@ -1,5 +1,5 @@
 import { HttpClient, HttpResponse } from '@/src/Core/Data/Protocols/HttpClient';
-import { LoginDTO } from '../../Model/Dto/LoginDto';
+import { LoginDTO } from '../../Domain/Dto/LoginDto';
 import { AuthenticationEndpoints } from '../https/AuthenticationEndpoints';
 import { ILoginInfra } from './ILoginInfra';
 

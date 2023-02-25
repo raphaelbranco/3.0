@@ -1,0 +1,19 @@
+.gridContainer{
+    margin-top: 20px;
+    padding: 50px; 
+    margin-right: 10px;
+}
+
+.gridContainer div {
+    margin-right: 10px !important;
+    margin-bottom: 10px;
+}
+
+.boxContainer{    
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 20px;
+}
