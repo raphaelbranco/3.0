@@ -100,11 +100,11 @@
   <h2>Screenshots</h2>
 <h3>Backend</h3>  
     <img src="https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_1.png">
-  <img src="https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_2.png">
-  <img src="https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_3.png">
-  <img src="https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_4.png">
-  <img src="https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_5.png">
-  <img src="https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_6.png">
+  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Backend_2.jpg">
+  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Backend_3.jpg">
+  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Backend_4.jpg">
+  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Backend_5.jpg">
+  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Backend_6.jpg">
     
   
 <h3>Front-end</h3>  
@@ -113,7 +113,7 @@
   <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Front_end_2.jpg">
   <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Front_end_3.jpg">
   <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Front_end_4.jpg">
-  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Front_end_5.jpg">
+  <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Front_end_5.jpg">  
   <img src="https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Front_end_6.jpg">
   
   
