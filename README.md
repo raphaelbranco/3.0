@@ -8,6 +8,7 @@
                         <p>
         Who am I? I am an Entrepreneur and Agilist with over 20 years of experience in software development. I have a strong sense of ownership, and I always seek to increase team productivity, organize processes, and, of course, code a lot.
                         </p>
+                        <p>https://www.linkedin.com/in/raphael-branco/</p>
                     </section>
                     <section>
                         <h2>Backend</h2>
