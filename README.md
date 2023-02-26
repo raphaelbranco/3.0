@@ -38,7 +38,10 @@
 <h2>What does the code do?</h2>
 <p>It has two basic structures:</p>
 <p>   Authentication using JWT token</p>
-<p>   Menu registration and listing</p>
+<p>   Menu registration and listing</p><h2>But isn't this really DDD / Does it need to be DDD?</h2>
+<p>Yes, DDD goes far beyond separating code into folders, with the use of ubiquitous language among other things, but again, the idea is to demonstrate the current knowledge I have.</p>
+<h2>What are the improvements you intend to make?</h2>
+<p>A lot can be improved, including issues related to responsibility segmentation. This is a first version, but it could include items related to Docker, infrastructure building, Terraforms, SonarQube, API Gateway, GRPC, Load Balancer, in short, the sky's the limit.</p>
                       
   </section>
   </main>
