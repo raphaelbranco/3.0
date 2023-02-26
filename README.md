@@ -99,8 +99,20 @@
    <section>
   <h2>Screenshots</h2>
 <h3>Backend</h3>  
-  ![BackEnd](https://github.com/github.png](https://github.com/raphaelbranco/3.0/blob/main/Screen%20Shots/Backend_1.png)
-  ![react-dnd-treeview](https://user-images.githubusercontent.com/3772820/204380436-4c501e28-6c0a-43ea-a317-6620d6dc1ca0.gif)
+  ![Backend 1](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_1.png)    
+  ![Backend 2](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_2.jpg)  
+  ![Backend 3](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_3.png)
+  ![Backend 4](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_4.png)
+  ![Backend 5](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_5.png)
+  ![Backend 6](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Backend_6.png)
+<h3>Front-end</h3>  
+  ![Front-end 1](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Front_end_1.png)
+  ![Front-end 2](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Front_end_2.png)
+  ![Front-end 3](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Front_end_3.png)
+  ![Front-end 4](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Front_end_4.png)
+  ![Front-end 5](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Front_end_5.png)
+  ![Front-end 6](https://github.com/raphaelbranco/3.0/blob/7e81eeaaf875c5c27ac4f323cd4a4c9a0637dff6/Screen%20Shots/Front_end_6.png)
+  
   </section
 <section>
   <h2>Detailed Backend</h2>
