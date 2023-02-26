@@ -95,9 +95,14 @@
 <p>Multilingualism</p>
                       </section>
                 </main>
-                      
+   
+   <section>
+  <h2>Screenshots</h2>
+<h3>Backend</h3>
+  
+  </section
 <section>
-  <h2>Backend</h2>
+  <h2>Detailed Backend</h2>
 <h3>Software Design Patterns</h3>
 <p>CQRS: Design pattern that separates data reading and writing into different models to optimize business logic.</p>
 <p>DDD: Software development approach that models business objects to accurately reflect an organization's logic.</p>
